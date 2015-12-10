@@ -82,3 +82,6 @@ client/bower_components
 .floobit
 .floo
 .flooignore
+
+# env config vars
+client/env/config.js 

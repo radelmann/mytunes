@@ -1,0 +1,5 @@
+var scConfig = {};
+var sc_client_id: "SOUND_CLOUD_CLIENT_ID_GOES_HERE";
+var scConfig.server = "http://api.soundcloud.com/users/gravity-pm/favorites";
+var scConfig.qs = '?client_id=' + scConfig.sc_client_id;
+var scConfig.url = scConfig.server + scConfig.qs;
