@@ -31,7 +31,6 @@ var SongQueue = Songs.extend({
   },
 
   onEnqueue: function(song) {
-    console.log('queue - enqueue');
   },
 
   playFirst: function() {
