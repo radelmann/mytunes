@@ -4,8 +4,10 @@
         <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
         below them until after the scripts load-->
         
-        <script src="env/config.js"></script>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/styles.css">
 
+        <script src="env/config.js"></script>
         <script src="bower_components/jquery/jquery.min.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/backbone/backbone.js"></script>
@@ -24,15 +26,28 @@
         $(function() {
         // set up model objects
         var library = new Songs();
+
+        //load library and intialize app on load success
         library.fetch({success: function(){
             window.app = new AppModel({library: library});
             // build a view for the top level of the whole app
             window.appView = new AppView({model: app});
             // put the view onto the screen
-            $('body').append(appView.render());
+            // $('body').append(appView.render());
+            appView.render();
         }});
-
         });
         </script>
+
+        <table class="content">
+            <h1>myTunes</h1>
+            <tr>
+                <td colspan="2" class="player-container"></td>
+            </tr>
+            <tr>
+                <td class="library-container"></td>
+                <td class="queue-container"></td>
+            </tr>
+        </table>
     </body>
 </html>

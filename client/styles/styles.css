@@ -1,0 +1,48 @@
+body {
+  font-family: helvetica;
+  color:#888;
+  margin-left: auto;
+  margin-right: auto;
+  width:800px;
+}
+
+audio {
+  width:100%;
+}
+
+.content {
+  width:800px;
+}
+
+.player-container {
+}
+
+.library-container {
+  width:50%;
+  vertical-align: top;
+  font-size: 12px;
+  padding:5px;
+}
+
+.queue-container {
+  width:50%;
+  vertical-align: top;
+  font-size: 12px;
+  padding:5px;
+}
+
+.library-item {
+  padding:3px;
+  margin-top:5px;
+}
+
+.library-item:hover {
+  background-color: #888;
+  color:#FFF; 
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: bold;
+} 
