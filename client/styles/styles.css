@@ -46,3 +46,9 @@ audio {
   font-size: 13px;
   font-weight: bold;
 } 
+
+.song-artwork-url {
+  float: left;
+  padding-right: 10px;
+  padding-bottom:10px;
+}
