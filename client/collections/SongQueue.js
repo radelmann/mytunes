@@ -6,34 +6,32 @@ var SongQueue = Songs.extend({
     this.on('enqueue', this.onEnqueue, this);
     this.on('add', this.onAdd, this);
     this.on('ended', this.onEnd, this);
+    this.on('play', this.onPlay, this);
   },
 
   onAdd: function() {
-    if (this.length === 1) {
+    //check if song is already playing
+    if (!app.get('currentSong')) {
       this.playFirst();
     }
   },
 
   onEnd: function() {
-    var song = this.at(0);
-    this.remove(song);
-    if (this.at(0) !== undefined) {
-      this.playFirst();
-    }
+    this.playFirst();
   },
 
   onDequeue: function(song) {
     this.remove(song);
-    if (this.at(0) !== undefined) {
-      this.playFirst();
-    }
   },
 
-  // onEnqueue: function(song) {
-  // },
+  onPlay: function(song) {
+    this.remove(song);
+  },
 
   playFirst: function() {
-    var song = this.at(0);
-    song.play();
+    if (this.at(0)) {
+      var song = this.at(0);
+        song.play();
+    }
   }
 });

@@ -27,7 +27,6 @@ var PlayerView = Backbone.View.extend({
   }
 });
 
-
 var Player = Backbone.View.extend({
 
   // HTML5 (native) audio tag is being used
@@ -41,7 +40,7 @@ var Player = Backbone.View.extend({
   },
 
   songEnd: function() {
-    this.model.dequeue();
+    this.model.ended();
   },
 
   render: function() {

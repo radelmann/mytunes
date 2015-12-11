@@ -6,7 +6,9 @@ var SongModel = Backbone.Model.extend({
   },
 
   ended: function() {
-    this.trigger('ended', this);
+    // this song is no longer in the queue, 
+    // need to get access to queue from app.get
+    app.get('songQueue').playFirst();
   },
 
   enqueue: function() {
