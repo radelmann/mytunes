@@ -29,8 +29,8 @@ var SongQueue = Songs.extend({
     }
   },
 
-  onEnqueue: function(song) {
-  },
+  // onEnqueue: function(song) {
+  // },
 
   playFirst: function() {
     var song = this.at(0);

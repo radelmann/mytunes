@@ -3,11 +3,16 @@ var SongQueueView = Backbone.View.extend({
 
   initialize: function() {
     this.render();
+
     this.collection.on('enqueue', function() {
       this.render();
     }, this);
 
     this.collection.on('dequeue', function() {
+      this.render();
+    }, this);
+
+    this.collection.on('add', function() {
       this.render();
     }, this);
   },
