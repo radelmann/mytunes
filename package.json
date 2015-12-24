@@ -1,0 +1,25 @@
+{
+  "name": "mytunes",
+  "version": "1.0.0",
+  "description": "html audio player that reads in library from soundCloud favorites",
+  "main": "server/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radelmann/2015-11-mytunes.git"
+  },
+  "author": "radelmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radelmann/2015-11-mytunes/issues"
+  },
+  "homepage": "https://github.com/radelmann/2015-11-mytunes",
+  "dependencies": {
+    "nodemon": "^1.8.1"
+  }
+}
