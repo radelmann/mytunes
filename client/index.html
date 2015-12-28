@@ -1,40 +1,12 @@
-
-        
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/styles.css">
-        
-        <script src="env/config.js"></script>
-        <script src="bower_components/jquery/jquery.min.js"></script>
-        <script src="bower_components/underscore/underscore.js"></script>
-        <script src="bower_components/backbone/backbone.js"></script>
-        <script src="data/data.js"></script>
-        <script src="models/SongModel.js"></script>
-        <script src="collections/Songs.js"></script>
-        <script src="collections/SongQueue.js"></script>
-        <script src="models/AppModel.js"></script>
-        <script src="views/PlayerView.js"></script>
-        <script src="views/LibraryView.js"></script>
-        <script src="views/LibraryEntryView.js"></script>
-        <script src="views/AppView.js"></script>
-        <script src="views/SongQueueEntryView.js"></script>
-        <script src="views/SongQueueView.js"></script>
-        <script>
-        $(function() {
-        // set up model objects
-        var library = new Songs();
-
-        //load library and intialize app on load success
-        library.fetch({success: function(){
-            window.app = new AppModel({library: library});
-            // build a view for the top level of the whole app
-            window.appView = new AppView({model: app});
-            // put the view onto the screen
-            // $('body').append(appView.render());
-            appView.render();
-        }});
-        });
-        </script>
-
+    </head>
+    <body>
         <table class="content">
             <h1>myTunes</h1>
             <tr>
@@ -46,4 +18,36 @@
             </tr>
         </table>
     </body>
+    <script src="env/config.js"></script>
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="data/data.js"></script>
+    <script src="models/SongModel.js"></script>
+    <script src="collections/Songs.js"></script>
+    <script src="collections/SongQueue.js"></script>
+    <script src="models/AppModel.js"></script>
+    <script src="views/PlayerView.js"></script>
+    <script src="views/LibraryView.js"></script>
+    <script src="views/LibraryEntryView.js"></script>
+    <script src="views/AppView.js"></script>
+    <script src="views/SongQueueEntryView.js"></script>
+    <script src="views/SongQueueView.js"></script>
+    
+    <script>
+    $(function() {
+    // set up model objects
+    var library = new Songs();
+    //load library and intialize app on load success
+    library.fetch({success: function(){
+    window.app = new AppModel({library: library});
+    // build a view for the top level of the whole app
+    window.appView = new AppView({model: app});
+    // put the view onto the screen
+    // $('body').append(appView.render());
+    appView.render();
+    }});
+    });
+    </script>
 </html>
