@@ -16,7 +16,7 @@ var LibraryView = Backbone.View.extend({
     // see http://api.jquery.com/detach/
     this.$el.children().detach();
 
-    this.$el.html('<span class="title">Library</span>').append(
+    this.$el.html('<h2>Library</h2>').append(
       this.collection.map(function(song) {
         return new LibraryEntryView({
           model: song
